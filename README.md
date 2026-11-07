@@ -25,12 +25,12 @@
 <h2 align="center">TEAM MEMBERS AND ROLES</h2>
 
 <ul>
-  <li><strong>Leader:</strong> Steve Andrei Maldonado — ____________________</li>
+  <li><strong>Leader:</strong> Steve Andrei Maldonado — (DITO ANG ROLES)</li>
   <li><strong>Members:</strong>
     <ul>
-      <li>Alessandra Ashanti Abdon — ____________________</li>
-      <li>Kaixer Emmanuel Antonio Oscar Alvar — ____________________</li>
-      <li>Marc Andrei Dita — ____________________</li>
+      <li>Alessandra Ashanti Abdon —(DITO ANG ROLES) </li>
+      <li>Kaixer Emmanuel Antonio Oscar Alvar — (DITO ANG ROLES)</li>
+      <li>Marc Andrei Dita — (DITO ANG ROLES)</li>
     </ul>
   </li>
 </ul>
