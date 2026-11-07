@@ -14,3 +14,35 @@
   <li><strong>Unexpected Weather Conditions</strong> – Bad weather can affect working days and slow down construction progress.</li>
   <li><strong>Machinery Breakdowns</strong> – Equipment failures can interrupt construction activities and reduce daily productivity.</li>
 </ul>
+<h2 align="center">PROJECT OBJECTIVES</h2>
+
+<h2 align="center">TARGET USERS</h2>
+
+<h2 align="center">MAIN FEATURES</h2>
+
+<h2 align="center">TECHNOLOGIES USED</h2>
+
+<h2 align="center">TEAM MEMBERS AND ROLES</h2>
+
+<ul>
+  <li><strong>Leader:</strong> Steve Andrei Maldonado — ____________________</li>
+  <li><strong>Members:</strong>
+    <ul>
+      <li>Alessandra Ashanti Abdon — ____________________</li>
+      <li>Kaixer Emmanuel Antonio Oscar Alvar — ____________________</li>
+      <li>Marc Andrei Dita — ____________________</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 align="center">OOP CONCEPTS DEMONSTRATED</h2>
+
+<h2 align="center">INSTRUCTIONS FOR RUNNING THE PROGRAM</h2>
+
+<h2 align="center">SAMPLE SCREENSHOTS</h2>
+
+<h2 align="center">KNOWN LIMITATIONS</h2>
+
+<h2 align="center">FUTURE IMPROVEMENTS</h2>
+
+<h2 align="center">PROJECT CONTRIBUTORS</h2>
