@@ -15,6 +15,7 @@
   <li><strong>Machinery Breakdowns</strong> – Equipment failures can interrupt construction activities and reduce daily productivity.</li>
 </ul>
 <h2 align="center">PROJECT OBJECTIVES</h2>
+
 ## General Objectives
 
 To develop a Java-based application that will simulate a construction project that tracks daily progress, labor, material, and equipment costs, and automatically adjusts the projected completion date when problems occur.
@@ -37,7 +38,23 @@ To develop a Java-based application that will simulate a construction project th
 
 <h2 align="center">TARGET USERS</h2>
 
+| Target Users | How they will use the system |
+|---|---|
+| **Project Managers and Constructors** | Enter a project plan, run the simulation, and see how delays, absences, weather, and breakdowns affect the finish date and budget before making decisions. |
+| **Site Engineers and Planners** | Test schedules and "what-if" scenarios by adding problems on chosen dates, and review reports to find waste and bottlenecks. |
+| **Students and Instructors** | Use the sample project (a two-storey house) to learn scheduling, resource management, and cost tracking, and to study how the OOP concepts are applied. |
+
 <h2 align="center">MAIN FEATURES</h2>
+
+| Feature | Description |
+|---|---|
+| **Project Setup** | The user enters a project name, start and target end dates, budget (PHP), workers with daily wages, machines with daily rental rates, materials with unit costs, shipments with expected dates, and tasks with prerequisites. Setup is locked once the simulation starts. |
+| **Day-by-Day Simulation** | The engine runs each working day: it applies problems, delivers shipments, counts workers present, pays them, charges machine rental, uses materials, and records the work done. |
+| **Problem Simulation** | Four problems are modeled: shipment delay (1 to 5 days), worker absence, rain (stops outdoor work), and machinery breakdown (1 to 3 days). They can be random, using a seed for repeatable results, or manually added. |
+| **Automatic Schedule Adjustment** | Problems reduce the work done each day, which pushes back the projected end date. The dashboard shows whether the project is on time or how many days late. |
+| **Cost Tracking and Reports** | The system totals labor, material, and equipment costs against the budget, shows unused stocks as a possible loss, and provides a dashboard, task progress, daily log, cost summary, material stock, and workforce reports. |
+| **Sample Project** | One click loads a two-storey house project so the program can be tried right away. |
+| **Visual Charts** | A progress-over-time chart and a Gantt chart show planned work, work done, and delays beyond the plan. |
 
 <h2 align="center">TECHNOLOGIES USED</h2>
 
