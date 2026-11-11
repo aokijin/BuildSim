@@ -73,6 +73,17 @@ To develop a Java-based application that will simulate a construction project th
 
 <h2 align="center">OOP CONCEPTS DEMONSTRATED</h2>
 
+| OOP Concept | How It Will Be Used |
+|---|---|
+| **Classes and Objects** | Real-world things are modeled as classes, such as Project, Task, Worker, Machine, Material, and Shipment. Each task, worker, or problem in a running simulation is an object. |
+| **Methods** | Methods perform the program’s work, for example `processDay()` in SimulationEngine, `calculateCost()` in Resource, `apply()` in Problem, and `getProgress()` in Task. |
+| **Encapsulation** | Attributes such as task progress, material stock, and dates are private and can only be changed through validated getters, setters, or methods. |
+| **Inheritance** | Worker, Machine, and Material extend the Resource class. WeatherProblem, WorkerAbsence, MachineryBreakdown, and ShipmentDelay extend the Problem class. |
+| **Polymorphism** | The engine calls `apply()` on any Problem and `calculateCost()` on any Resource without knowing the exact type. Each subclass responds in its own way. |
+| **Abstraction** | Resource and Problem are abstract classes that declare what every subclass must do (`calculateCost()` and `apply()`) while leaving the details to each subclass. |
+| **Exception Handling** | Custom exceptions such as InsufficientStockException, CyclicDependencyException, and InvalidDateException, plus try-catch blocks for invalid user input. |
+| **Arrays / Data Handling** | ArrayList and similar collections store tasks, workers, machines, materials, shipments, and daily logs. Arrays and loops are used for reports and calculations. |
+
 <h2 align="center">INSTRUCTIONS FOR RUNNING THE PROGRAM</h2>
 
 <h2 align="center">SAMPLE SCREENSHOTS</h2>
