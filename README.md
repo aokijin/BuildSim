@@ -15,6 +15,25 @@
   <li><strong>Machinery Breakdowns</strong> – Equipment failures can interrupt construction activities and reduce daily productivity.</li>
 </ul>
 <h2 align="center">PROJECT OBJECTIVES</h2>
+## General Objectives
+
+To develop a Java-based application that will simulate a construction project that tracks daily progress, labor, material, and equipment costs, and automatically adjusts the projected completion date when problems occur.
+
+## Specific Objectives
+
+1. To allow users to enter a project plan, including the timeframe, budget, tasks, workers, machines, materials, shipments, and task dependencies.
+
+2. To simulate the project one working day at a time (Monday to Saturday) and record the percentage of work finished each day.
+
+3. To track the number of workers present, their daily salaries, and the cost of every material used, waste and losses are easy to spot.
+
+4. To simulate four problems (shipment delay, worker absence, bad weather, and machinery breakdown), either randomly using a seed or manually added by the user.
+
+5. To automatically recalculate the projected end date and total cost after each day, and show whether the project is on time or late.
+
+6. To generate reports, including a dashboard, task progress, daily log, cost summary, material stock, and workforce summary.
+
+7. To demonstrate classes and objects, methods, encapsulation, inheritance, polymorphism, abstraction, exception handling, and data handling in the program.
 
 <h2 align="center">TARGET USERS</h2>
 
