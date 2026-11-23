@@ -79,7 +79,7 @@ List the actual team members and the work each person is responsible for. Course
 
 ### Compile and run on Windows PowerShell
 
-Open PowerShell in the `BuildSim_Simple` folder, which contains the `src` folder, then run:
+Open PowerShell in the `BuildSim` folder, which contains the `src` folder, then run:
 
 ```powershell
 New-Item -ItemType Directory -Force out | Out-Null
