@@ -56,10 +56,10 @@ List the actual team members and the work each person is responsible for. Course
 
 | Team member | Role | Responsibilities |
 |---|---|---|
-| [Maldonado] | Project lead | [Actual responsibilities] |
-| [Name] | Lead programmer | [Actual responsibilities] |
-| [Name] | System/design lead | [Actual responsibilities] |
-| [Name or remove this row] | Documentation and testing | [Actual responsibilities] |
+| Maldonado, Steve Andrei S. | Project lead | [Actual responsibilities] |
+| Alvar, Kaizer Emmanuel Oscar Antonio M. | Lead programmer | [Actual responsibilities] |
+| Dita, Marc Andrei L. | System/design lead | [Actual responsibilities] |
+| Abdon, Alessandra Ashanti M. | Documentation and testing | [Actual responsibilities] |
 
 ## OOP Concepts Demonstrated
 
