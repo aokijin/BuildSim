@@ -1,152 +1,140 @@
- <h1 align="center">BuildSim</h1>
+# BuildSim
 
-<p align="justify">
-  BuildSim is a Java console application that simulates a construction project one working day at a time. Users enter a project plan, including tasks, workers, machines, materials, and delivery schedules. The program then runs the project day by day while real-world problems such as delayed shipments, worker absences, bad weather, and machinery breakdowns interrupt the work.
-</p>
+## Project Description
 
-<p align="justify">
-  After every working day, the program updates the project's progress percentage, the number of workers present and their salaries, material usage and costs, and the projected completion date.
-</p>
+BuildSim is a Java desktop application for keeping basic construction project information in one place. It tracks workers, machines, materials, shipments, absences, site problems, task progress, daily notes, schedule changes, and estimated costs. Project data is saved locally in CSV files.
 
----
+## Problem Being Addressed
 
-<h2 align="center">PROBLEM BEING ADDRESSED</h2>
+Small construction projects may track schedules, resources, deliveries, and costs in separate notes or spreadsheets. This makes it difficult to keep information up to date and understand how delays affect the project. BuildSim brings these records together in one application and updates its reports when project data changes.
 
-<p align="justify">
-  BuildSim aims to address the following problems commonly experienced in construction projects:
-</p>
+## Project Objectives
 
-| Problem | Description |
-|:---|:---|
-| **Material Delivery Delays** | Late deliveries can prevent construction tasks from proceeding as planned. |
-| **Worker Absences** | The absence of workers reduces the amount of work completed in a day and affects productivity. |
-| **Unexpected Weather Conditions** | Bad weather can affect working days and slow down construction progress. |
-| **Machinery Breakdowns** | Equipment failures can interrupt construction activities and reduce daily productivity. |
+- Organize construction project information in one application.
+- Track workers, machines, materials, shipments, absences, problems, and tasks.
+- Edit material, shipment, and task information, including task progress.
+- Show adjusted task dates after recorded problems.
+- Record optional daily notes about what happened or was accomplished.
+- Summarize estimated material, labor, and machine costs against the project budget.
+- Demonstrate the four fundamental object-oriented programming principles in Java.
 
----
+## Target Users
 
-<h2 align="center">PROJECT OBJECTIVES</h2>
+- Students learning Java and object-oriented programming.
+- Small construction project managers who need a simple local project tracker.
 
-<h3>General Objective</h3>
+BuildSim is a course project, not a replacement for professional construction-management or accounting software.
 
-<p align="justify">
-  To develop a Java-based application that simulates a construction project by tracking daily progress, labor, material, and equipment costs, while automatically adjusting the projected completion date when problems occur.
-</p>
-
-<h3>Specific Objectives</h3>
-
-1. To allow users to enter a project plan, including the timeframe, budget, tasks, workers, machines, materials, shipments, and task dependencies.
-2. To simulate the project one working day at a time (Monday to Saturday) and record the percentage of work completed each day.
-3. To track the number of workers present, their daily salaries, and the cost of every material used to identify waste and losses.
-4. To simulate four problems: shipment delays, worker absences, bad weather, and machinery breakdowns. These can be generated randomly using a seed or manually added by the user.
-5. To automatically recalculate the projected completion date and total cost after each day and show whether the project is on schedule or delayed.
-6. To generate reports, including a dashboard, task progress, daily log, cost summary, material stock, and workforce summary.
-7. To demonstrate classes and objects, methods, encapsulation, inheritance, polymorphism, abstraction, exception handling, and data handling in the program.
-
----
-
-<h2 align="center">TARGET USERS</h2>
-
-| Target Users | How They Will Use the System |
-|:---|:---|
-| **Project Managers and Constructors** | Enter a project plan, run the simulation, and see how delays, absences, weather, and breakdowns affect the finish date and budget before making decisions. |
-| **Site Engineers and Planners** | Test schedules and "what-if" scenarios by adding problems on chosen dates and reviewing reports to find waste and bottlenecks. |
-| **Students and Instructors** | Use the sample project (a two-storey house) to learn scheduling, resource management, cost tracking, and OOP concepts. |
-
----
-
-<h2 align="center">MAIN FEATURES</h2>
+## Main Features
 
 | Feature | Description |
-|:---|:---|
-| **Project Setup** | Allows users to enter a project name, start and target end dates, budget (PHP), workers with daily wages, machines with daily rental rates, materials with unit costs, shipments with expected dates, and tasks with prerequisites. Setup is locked once the simulation starts. |
-| **Day-by-Day Simulation** | Runs each working day, applies problems, processes deliveries, counts workers present, calculates salaries, charges machine rental, uses materials, and records daily progress. |
-| **Problem Simulation** | Models four problems: shipment delays (1 to 5 days), worker absences, rain (which stops outdoor work), and machinery breakdowns (1 to 3 days). Problems can be generated randomly using a seed for repeatable results or manually added. |
-| **Automatic Schedule Adjustment** | Adjusts the projected completion date when problems reduce daily productivity. The dashboard shows whether the project is on schedule or how many days it is delayed. |
-| **Cost Tracking and Reports** | Tracks labor, material, and equipment costs against the budget. It also identifies unused materials as possible losses and generates project reports. |
-| **Sample Project** | Provides a sample two-storey house project so users can try the application right away. |
-| **Visual Charts** | Displays a progress-over-time chart and a Gantt chart to compare planned work, actual progress, and delays beyond the original schedule. |
+|---|---|
+| Project management | Create and reopen projects with a name, dates, and budget. |
+| Assistant | Convert a plain-language request into proposed data-entry commands. Commands are added only after the user reviews and confirms them. |
+| Workers and machines | Record workers' daily wages and machines' daily rates. |
+| Materials | Record material quantity, price, and stock; edit existing materials. |
+| Shipments | Record a material, quantity, expected date, and Pending, Delayed, or Delivered status; edit existing shipments. |
+| Absences and problems | Track worker absences and weather, machinery, or shipment-delay problems. |
+| Tasks | Track start and end dates and percentage complete; edit existing tasks. |
+| Daily Report | Review daily schedule information and save an optional note for each date. |
+| Costs | Review estimated material, salary, and machine costs and compare them with the budget. |
+| Gantt Chart | View planned task duration, added delay days, and progress in grayscale. |
 
----
+## Technologies Used
 
-<h2 align="center">TECHNOLOGIES USED</h2>
+- Java 17 or newer
+- Java Swing for the desktop interface
+- Java `HttpClient` for optional Gemini Assistant requests
+- CSV files for local project storage
+- Git and GitHub for source control and team collaboration
 
-| Technology | Purpose |
-|:---|:---|
-| Java | Main programming language used to develop the application. |
-| [Add technology] | [Add its purpose.] |
+The program uses no third-party Java libraries to compile.
 
----
+## Team Members and Roles
 
-<h2 align="center">TEAM MEMBERS AND ROLES</h2>
+List the actual team members and the work each person is responsible for. Course guidelines specify a team of three to four members, subject to instructor direction.
 
-| Position | Name | Assigned Role |
-|:---|:---|:---|
-| Leader | Steve Andrei Maldonado | (DITO ANG ROLES) |
-| Member | Alessandra Ashanti Abdon | (DITO ANG ROLES) |
-| Member | Kaixer Emmanuel Antonio Oscar Alvar | (DITO ANG ROLES) |
-| Member | Marc Andrei Dita | (DITO ANG ROLES) |
+| Team member | Role | Responsibilities |
+|---|---|---|
+| [Maldonado] | Project lead | [Actual responsibilities] |
+| [Name] | Lead programmer | [Actual responsibilities] |
+| [Name] | System/design lead | [Actual responsibilities] |
+| [Name or remove this row] | Documentation and testing | [Actual responsibilities] |
 
----
+## OOP Concepts Demonstrated
 
-<h2 align="center">OOP CONCEPTS DEMONSTRATED</h2>
+| Principle | Example in BuildSim |
+|---|---|
+| Encapsulation | Domain data is stored in private fields and accessed through constructors, getters, and controlled methods. Constructors validate values such as names, dates, quantities, and progress. |
+| Inheritance | `Worker`, `Machine`, and `Material` extend `Resource`. `WeatherProblem`, `MachineryProblem`, and `ShipmentDelayProblem` extend `Problem`. Assistant command classes extend `Command`. |
+| Abstraction | Abstract classes `Resource`, `Problem`, and `Command` define shared behavior. Interfaces `CsvRecord` and `Interpreter` define behavior contracts. |
+| Polymorphism | Cost calculation calls `getCost` on different resource types. Saving calls `toCsv` on different `CsvRecord` objects. Problem and command subclasses provide their own behavior. |
 
-| OOP Concept | How It Will Be Used |
-|:---|:---|
-| **Classes and Objects** | Real-world things are modeled as classes, such as Project, Task, Worker, Machine, Material, and Shipment. Each task, worker, or problem in a running simulation is an object. |
-| **Methods** | Methods perform the program's work, for example `processDay()` in SimulationEngine, `calculateCost()` in Resource, `apply()` in Problem, and `getProgress()` in Task. |
-| **Encapsulation** | Attributes such as task progress, material stock, and dates are private and can only be changed through validated getters, setters, or methods. |
-| **Inheritance** | Worker, Machine, and Material extend the Resource class. WeatherProblem, WorkerAbsence, MachineryBreakdown, and ShipmentDelay extend the Problem class. |
-| **Polymorphism** | The engine calls `apply()` on any Problem and `calculateCost()` on any Resource without knowing the exact type. Each subclass responds in its own way. |
-| **Abstraction** | Resource and Problem are abstract classes that declare what every subclass must do (`calculateCost()` and `apply()`) while leaving the details to each subclass. |
-| **Exception Handling** | Custom exceptions such as InsufficientStockException, CyclicDependencyException, and InvalidDateException, plus try-catch blocks for invalid user input. |
-| **Arrays / Data Handling** | ArrayList and similar collections store tasks, workers, machines, materials, shipments, and daily logs. Arrays and loops are used for reports and calculations. |
+## Instructions for Running the Program
 
----
+### Requirements
 
-<h2 align="center">INSTRUCTIONS FOR RUNNING THE PROGRAM</h2>
+- Install JDK 17 or newer.
+- Internet access and a Gemini API key are needed only for the optional Assistant.
 
-1. Make sure Java is installed on your computer.
-2. Download or clone the BuildSim repository.
-3. Open the project folder using your preferred Java IDE or code editor.
-4. Locate the main Java file.
-5. Compile and run the application.
-6. Follow the instructions displayed in the console.
+### Compile and run on Windows PowerShell
 
----
+Open PowerShell in the `BuildSim_Simple` folder, which contains the `src` folder, then run:
 
-<h2 align="center">SAMPLE SCREENSHOTS</h2>
+```powershell
+New-Item -ItemType Directory -Force out | Out-Null
+javac -d out src\*.java
+java -cp out BuildSim
+```
 
-<p align="center">
-  <i>Insert screenshots of the BuildSim application below.</i>
-</p>
+Compile all Java source files together. Alternatively, open `src/BuildSim.java` in an IDE configured with JDK 17 or newer and run its `main` method.
 
----
+### Optional Gemini Assistant setup
 
-<h2 align="center">KNOWN LIMITATIONS</h2>
+The application checks the `GEMINI_API_KEY` environment variable, `gemini-key.txt` in the run folder, or `src/gemini-key.txt`. The local key file is ignored by Git. Configure the key locally; never put it in Java source, commit it, or distribute it with the desktop app. A desktop application cannot keep an embedded shared key secret. Without a configured key, the Assistant is unavailable, but the other features continue to work.
 
-- (Add the known limitations of the application.)
-- (Add features that are not yet fully implemented.)
+Optional settings:
 
----
+| Environment variable | Purpose | Default |
+|---|---|---|
+| `GEMINI_API_KEY` | Gemini API credential | None |
+| `GEMINI_MODEL` | Gemini model name | `gemini-flash-lite-latest` |
+| `GEMINI_BASE_URL` | Gemini API base URL | `https://generativelanguage.googleapis.com/v1beta` |
 
-<h2 align="center">FUTURE IMPROVEMENTS</h2>
+## Sample Screenshots
 
-- (Add planned improvements for future versions.)
-- (Add possible additional features.)
+Add screenshots of the final running application to the `screenshots` folder. Replace these placeholders with the actual image files before submission. Do not include API keys or private project data.
 
----
+![Project overview screenshot](screenshots/project-overview.png)
 
-<h2 align="center">PROJECT CONTRIBUTORS</h2>
+![Tasks and Gantt chart screenshot](screenshots/tasks-and-gantt.png)
 
-<p align="center">
-  <strong>Developed by:</strong><br>
-  Steve Andrei Maldonado<br>
-  Alessandra Ashanti Abdon<br>
-  Kaixer Emmanuel Antonio Oscar Alvar<br>
-  Marc Andrei Dita
-</p>
+![Daily report and costs screenshot](screenshots/daily-report-and-costs.png)
 
-<p align="center">
-  <strong>BuildSim – Construction Project Simulation and Cost Tracking System</strong>
-</p>
+## Known Limitations
+
+- Data is stored in local CSV files. There is no database, cloud synchronization, user login, or multi-user editing.
+- The simple CSV format sanitizes commas and line breaks in saved text.
+- Schedule and cost figures use simplified assumptions. Sundays are non-working days, absent workers are excluded from that day's salary, and machine rates are applied for each working day.
+- The daily completion estimate is based on task dates, not measured construction quantities.
+- The Assistant requires internet access and an owner-configured Gemini API key. Gemini can misunderstand a request, so users should review proposed commands before confirming them.
+- The application is a desktop program and is not designed for mobile or web browsers.
+
+## Future Improvements
+
+- Use a database or a robust CSV library and add backup and export options.
+- Add task dependencies, configurable workdays, weekends, and holidays to schedule calculations.
+- Add material usage history, shipment history, search, and filtering.
+- Add automated tests and improve the process for recording test evidence.
+- Provide centrally managed AI access through a secure service if shared Assistant access is required.
+
+## Project Contributors
+
+List every person who made an actual contribution to the project. Include technical and documentation work, and provide GitHub evidence when available.
+
+| Contributor | Contribution | Evidence (commit, pull request, or files) |
+|---|---|---|
+| [Name] | [Actual contribution] | [Commit, pull request, or files] |
+| [Name] | [Actual contribution] | [Commit, pull request, or files] |
+| [Name] | [Actual contribution] | [Commit, pull request, or files] |
+| [Name or remove this row] | [Actual contribution] | [Commit, pull request, or files] |
