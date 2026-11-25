@@ -1,7 +1,6 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.time.temporal.ChronoUnit;
 
 /** Dashboard summary for the project currently open in BuildSim. */
 public class OverviewTab extends JPanel {
@@ -212,11 +211,10 @@ public class OverviewTab extends JPanel {
         if (project == null) return;
         projectName.setText(project.getName());
         budgetValue.setText("₱" + Main.money(project.getBudget()));
-        int projectDays = Math.max(1, (int) ChronoUnit.DAYS.between(project.getStartDate(), project.getEndDate()));
-        double estimated = 0;
-        for (Worker resource : project.getWorkers()) estimated += resource.getCost(projectDays);
-        for (Machine resource : project.getMachines()) estimated += resource.getCost(projectDays);
-        for (Material resource : project.getMaterials()) estimated += resource.getCost(projectDays);
+        java.util.ArrayList<DayRow> rows = Schedule.dailyRows(project);
+        double estimated = Schedule.materialsTotal(project)
+                + Schedule.salaryTotal(rows)
+                + Schedule.machinesTotal(project, rows);
         costValue.setText("₱" + Main.money(estimated));
         remainingValue.setText("₱" + Main.money(project.getBudget() - estimated));
 
