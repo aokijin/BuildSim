@@ -18,8 +18,10 @@ public class AssistantTab extends JPanel {
     private Main app;
     private Project shownProject;                   // used to show the welcome text once for each project
     private ArrayList<Command> pending;             // what was understood and waits for yes / no
+    private String sessionKey;
 
     private JLabel keyLabel = new JLabel();
+    private JButton keyButton = new JButton("Set API key");
     private JTextArea chatArea = new JTextArea();
     private JTextField inputField = new JTextField();
     private JButton sendButton = new JButton("Send");
@@ -33,6 +35,7 @@ public class AssistantTab extends JPanel {
         // top: the status of the API key
         JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
         top.add(keyLabel);
+        top.add(keyButton);
 
         // middle: the chat
         chatArea.setEditable(false);
@@ -63,6 +66,7 @@ public class AssistantTab extends JPanel {
 
         inputField.addActionListener(e -> send());          // the Enter key sends too
         sendButton.addActionListener(e -> send());
+        keyButton.addActionListener(e -> configureApiKey());
         yesButton.addActionListener(e -> confirm());
         noButton.addActionListener(e -> cancel());
         updateKeyLabel();
@@ -74,6 +78,9 @@ public class AssistantTab extends JPanel {
 
     // Configure the owner's key through GEMINI_API_KEY or a local ignored gemini-key.txt file.
     private String findKey() {
+        if (sessionKey != null && !sessionKey.isBlank()) {
+            return sessionKey;
+        }
         String fromEnvironment = System.getenv("GEMINI_API_KEY");
         if (fromEnvironment != null && !fromEnvironment.isBlank()) {
             return fromEnvironment.trim();
@@ -112,10 +119,49 @@ public class AssistantTab extends JPanel {
         if (isReady()) {
             keyLabel.setText("Assistant ready   |   Model: " + modelName());
             keyLabel.setForeground(Color.BLACK);
+            keyButton.setText("Change API key");
         } else {
-            keyLabel.setText("Assistant unavailable: owner must configure GEMINI_API_KEY or gemini-key.txt.");
+            keyLabel.setText("Assistant key not set.");
             keyLabel.setForeground(Color.BLACK);
+            keyButton.setText("Set API key");
         }
+    }
+
+    private boolean configureApiKey() {
+        JPasswordField keyInput = new JPasswordField(30);
+        JCheckBox remember = new JCheckBox("Remember on this computer (saved in ignored src/gemini-key.txt)");
+        JPanel fields = new JPanel();
+        fields.setLayout(new BoxLayout(fields, BoxLayout.Y_AXIS));
+        fields.add(new JLabel("Enter your own Gemini API key:"));
+        fields.add(Box.createVerticalStrut(8));
+        fields.add(keyInput);
+        fields.add(Box.createVerticalStrut(8));
+        fields.add(remember);
+        int choice = JOptionPane.showConfirmDialog(this, fields, "Configure Assistant", JOptionPane.OK_CANCEL_OPTION,
+                JOptionPane.PLAIN_MESSAGE);
+        char[] entered = keyInput.getPassword();
+        if (choice != JOptionPane.OK_OPTION) {
+            java.util.Arrays.fill(entered, '\0');
+            return false;
+        }
+        String key = new String(entered).trim();
+        java.util.Arrays.fill(entered, '\0');
+        if (key.isEmpty()) {
+            Main.message("Enter a Gemini API key to use the Assistant.");
+            return false;
+        }
+        sessionKey = key;
+        if (remember.isSelected()) {
+            try {
+                java.nio.file.Path keyFile = Files.isDirectory(Paths.get("src"))
+                        ? Paths.get("src", "gemini-key.txt") : Paths.get("gemini-key.txt");
+                Files.writeString(keyFile, key + System.lineSeparator());
+            } catch (IOException e) {
+                Main.message("The key is active for this session but could not be saved on this computer: " + e.getMessage());
+            }
+        }
+        updateKeyLabel();
+        return true;
     }
 
     // ====================================================================
@@ -167,11 +213,13 @@ public class AssistantTab extends JPanel {
         if (text.isEmpty() || !sendButton.isEnabled()) {
             return;
         }
-        inputField.setText("");
-        addLine("You: " + text);
+        boolean alreadyDisplayed = false;
 
         // while something waits, "yes" and "no" answer it
         if (pending != null) {
+            inputField.setText("");
+            addLine("You: " + text);
+            alreadyDisplayed = true;
             String answer = text.toLowerCase();
             if (answer.equals("yes") || answer.equals("y") || answer.equals("ok")) {
                 confirm();
@@ -187,8 +235,16 @@ public class AssistantTab extends JPanel {
 
         String key = findKey();
         if (key == null) {
-            addLine("Bot: The project owner needs to configure the Assistant. See the README for GEMINI_API_KEY setup.");
-            return;
+            if (!configureApiKey()) {
+                addLine("Bot: Enter an API key with the Set API key button to use the Assistant.");
+                return;
+            }
+            key = findKey();
+            if (key == null) return;
+        }
+        if (!alreadyDisplayed) {
+            inputField.setText("");
+            addLine("You: " + text);
         }
 
         // the call to Gemini takes some seconds, so it runs in its own thread and the window does not freeze
