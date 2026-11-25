@@ -57,7 +57,7 @@ List the actual team members and the work each person is responsible for. Course
 | Team member | Role | Responsibilities |
 |---|---|---|
 | Maldonado, Steve Andrei S. | Project lead | [Actual responsibilities] |
-| Alvar, Kaizer Emmanuel Oscar Antonio M. | Lead programmer | [Actual responsibilities] |
+| Alvar, Kaixer Emmanuel Oscar Antonio M. | Lead programmer | [Actual responsibilities] |
 | Dita, Marc Andrei L. | System/design lead | [Actual responsibilities] |
 | Abdon, Alessandra Ashanti M. | Documentation and testing | [Actual responsibilities] |
 
