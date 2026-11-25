@@ -1,0 +1,58 @@
+PROJECT,Sample House Build,2025-01-06,3500000.0,2025-06-30
+WORKER,Elena Cruz - Project Manager,2200.0
+WORKER,Marco Reyes - Site Supervisor,1800.0
+WORKER,Andres Santos - Safety Officer,1500.0
+WORKER,Luis Mendoza - Lead Carpenter,1500.0
+WORKER,Paolo Garcia - Carpenter,1200.0
+WORKER,Ramon Flores - Mason,1300.0
+WORKER,Jose Dela Cruz - Mason,1200.0
+WORKER,Carlo Ramos - Electrician,1500.0
+WORKER,Miguel Torres - Plumber,1450.0
+WORKER,Daniel Bautista - Painter,1200.0
+WORKER,Noel Villanueva - Equipment Operator,1400.0
+WORKER,Anna Lim - Procurement Coordinator,1350.0
+MACHINE,Concrete Mixer,900.0
+MACHINE,Plate Compactor,650.0
+MACHINE,Portable Generator,500.0
+MATERIAL,Cement Bags,240.0,285.0,0.0
+MATERIAL,Steel Rebar (kg),1800.0,42.0,0.0
+MATERIAL,Sand (cubic meters),24.0,1850.0,0.0
+MATERIAL,Gravel (cubic meters),20.0,2100.0,0.0
+MATERIAL,Concrete Blocks,2200.0,18.0,0.0
+MATERIAL,Roofing Sheets,85.0,780.0,0.0
+MATERIAL,Electrical Wire (meters),650.0,38.0,0.0
+MATERIAL,PVC Pipe (meters),180.0,95.0,0.0
+MATERIAL,Paint (gallons),32.0,980.0,0.0
+SHIPMENT,Cement Bags,120.0,2025-01-12,Delivered
+SHIPMENT,Steel Rebar (kg),900.0,2025-01-15,Delivered
+SHIPMENT,Sand (cubic meters),24.0,2025-01-20,Delivered
+SHIPMENT,Gravel (cubic meters),20.0,2025-02-03,Delivered
+SHIPMENT,Concrete Blocks,2200.0,2025-02-10,Delivered
+SHIPMENT,Roofing Sheets,85.0,2025-03-24,Delivered
+SHIPMENT,Electrical Wire (meters),650.0,2025-04-18,Delivered
+SHIPMENT,PVC Pipe (meters),180.0,2025-04-18,Delivered
+SHIPMENT,Paint (gallons),32.0,2025-05-20,Delivered
+ABSENCE,Paolo Garcia - Carpenter,2025-02-12
+ABSENCE,Daniel Bautista - Painter,2025-05-12
+PROBLEM,Weather,2025-02-18,-,2
+PROBLEM,Machinery,2025-03-03,Concrete Mixer,1
+PROBLEM,Shipment delay,2025-03-20,Roofing Sheets,3
+TASK,Survey and site layout,2025-01-06,2025-01-10,100
+TASK,Site clearing and excavation,2025-01-11,2025-01-24,100
+TASK,Foundation and concrete footing,2025-01-25,2025-02-14,100
+TASK,Ground floor slab,2025-02-15,2025-02-28,100
+TASK,Wall framing and blockwork,2025-03-01,2025-03-28,100
+TASK,Roof framing and roofing,2025-03-29,2025-04-18,100
+TASK,Electrical rough-in,2025-04-19,2025-05-02,100
+TASK,Plumbing installation,2025-05-03,2025-05-16,100
+TASK,Doors windows and exterior finish,2025-05-17,2025-05-30,100
+TASK,Interior plastering and flooring,2025-05-31,2025-06-13,100
+TASK,Painting and final fixtures,2025-06-14,2025-06-24,100
+TASK,Final inspection and owner handover,2025-06-25,2025-06-30,100
+DAILY,2025-01-06,Survey completed and house layout marked on site.
+DAILY,2025-02-14,Foundation inspection passed and concrete footing completed.
+DAILY,2025-03-28,Exterior walls and structural blockwork completed.
+DAILY,2025-04-18,Roof installation completed after the roofing shipment arrived.
+DAILY,2025-05-16,Electrical and plumbing systems installed and checked.
+DAILY,2025-06-24,Painting fixtures and interior finishing completed.
+DAILY,2025-06-30,Final inspection passed and completed house handed over to the owner.
