@@ -22,7 +22,7 @@ class Absence implements CsvRecord {
     public String toCsv() { return "ABSENCE," + Project.clean(workerName) + "," + date; }
 }
 
-/** The Absences tab: the days the workers were absent. One daily wage is deducted for each absence. */
+/** The Absences tab: the days the workers were absent. One daily wage is deducted for each absence.  */
 public class AbsencesTab extends JPanel {
 
     private Main app;
